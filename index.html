@@ -126,7 +126,7 @@ function Calculator(){
         function handleClear(){
             setCalc({
             current: '0',
-            total : '',
+            total : '0',
             isInitial: true,
             preOp:''
         });
@@ -171,22 +171,23 @@ function doCalculation(){
             <CalcButton onClick={handleNumber} value='7'/>
             <CalcButton onClick={handleNumber} value='8'/>
             <CalcButton onClick={handleNumber} value='9'/>
-            <CalcButton onClick={handleNumber} value="+"/>
+            <CalcButton className="operator" value="*" onClick={handleOperator}/>
 
             <CalcButton onClick={handleNumber} value='4'/>
             <CalcButton onClick={handleNumber} value='5'/>
             <CalcButton onClick={handleNumber} value='6'/>
-            <CalcButton onClick={handleNumber} value="-"/>
+            <CalcButton className="operator" value="/" onClick={handleOperator}/>
 
             <CalcButton onClick={handleNumber} value='1'/>
             <CalcButton onClick={handleNumber} value='2'/>
             <CalcButton onClick={handleNumber} value='3'/>
-            <CalcButton onClick={handleNumber} value="/"/>
+            <CalcButton className="operator" value="+" onClick={handleOperator}/>
+
 
             <CalcButton value="C" onClick={handleClear}/>
             <CalcButton value="0" onClick={handleNumber}/>
-            <CalcButton className="operation" value="="/>
-            <CalcButton className="operation" value="*"/>
+            <CalcButton className="operator" value="=" onClick={handleOperator}/>
+            <CalcButton className="operator" value="-" onClick={handleOperator}/>
         </div>
     );
 }
