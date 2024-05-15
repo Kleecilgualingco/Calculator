@@ -113,14 +113,14 @@ function Calculator(){
         setCalc({current: '0', isInitial: true});
     }
 
-    // useState
-        // const [display, setDisplay] = React.useState('0');
-        const [calc, setCalc] = React.useState({
-            current: '0',
-            total : '',
-            isInitial: true,
-            preOp:''
-        });
+   // useState
+//useState returns an array with 2 elements, the first element is the current state value, the second element is a function that allows you to update the state value
+const [calc, setCalc] = React.useState({
+    current: '0',
+    total: '',
+    isInitial: true,
+    preOp:''
+});
 
         // handle clear button
         function handleClear(){
