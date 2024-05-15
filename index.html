@@ -100,12 +100,12 @@ function Calculator(){
 
     function handleNumber(value){
         // alert(value);
-    let newNum = value;
+    let newValue = value;
     if(!calc.isInitial){
         newNum = calc.current + value;
     }
 
-    setCalc({current: newNum, total: calc.total, isInitial: false, preOp: calc.preOp});
+    setCalc({current: newValue, total: calc.total, isInitial: false, preOp: calc.preOp});
 }
 
     // handle clear button
